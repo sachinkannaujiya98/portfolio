@@ -7,7 +7,9 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <div class=" w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 pb-20">
     <App />
+    </div>
   </React.StrictMode>
 );
 
