@@ -1,5 +1,4 @@
 import React from "react";
-import Avatar from "../assets/sachin.jpg"
 const Work = () => {
   return (
     <div>
