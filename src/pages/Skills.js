@@ -4,18 +4,17 @@ import Mongo_DbLogo from "../assets/mongodb.png"
 const Skills = () => {
   return (
     <div>
-  
-      <div className="flex justify-start items-baseline gap-x-4 mt-12">
+      <div className="flex justify-start items-center gap-x-4 my-12">
         <div className="">
-          <h1 className="text-3xl font-[300] text-green-300">Skills</h1>
+          <h1 className="text-3xl font-[300]  text-[#A1ABBF]"><span className='text-[#52DEE5]'>04. </span>Skills</h1>
         </div>
-        <hr className="h-[2px] w-1/3 bg-green-400 block" />
+        <hr className="h-[2px] w-1/3 bg-[#A1ABBF] block" />
       </div>
       <div className="flex gap-12 mt-3 items-center">
-        <img src="https://www.avneesh.tech/logos/react.svg" alt="react"/>
-        <img className="h-32" src="https://www.avneesh.tech/logos/nextjs.svg" alt="next"/>
-        <img className="h-32 rounded-full" src={NodeLogo} alt="node"/>
-        <img className="h-32 rounded-full" src={Mongo_DbLogo} alt="mongodb"/>
+        <a href="https://reactjs.org/docs/getting-started.html" target="_blank"><img className="h-24 hover:scale-125 delay-150" src="https://www.avneesh.tech/logos/react.svg" alt="react" /></a>
+        <a href="https://nextjs.org/" target="_blank"><img className="h-24 hover:scale-125 delay-150" src=" https://www.avneesh.tech/logos/nextjs.svg" alt="next" /></a>
+        <a href="https://nodejs.org/" target="_blank"> <img className="h-24 hover:scale-125 delay-150 rounded-full" src={NodeLogo} alt="node" /></a>
+        <a href="https://www.mongodb.com/" target="_blank"><img className="h-24 hover:scale-125 delay-150 rounded-full" src={Mongo_DbLogo} alt="mongodb" /></a>
       </div>
     </div>
 
