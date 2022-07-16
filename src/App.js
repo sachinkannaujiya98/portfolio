@@ -9,14 +9,16 @@ import Skills from './pages/Skills';
 import ContactUs from './pages/ContactUs';
 function App() {
   return (
-    < div className=' container mx-auto'>
-    <Navbar/>
-    <Info/>
-    <About/>
-    <Testimonial/>
-    <Work/>
-    <Skills/>
-    <ContactUs/>
+    <div className=''>
+      <Navbar />
+      <div className='container max-w-6xl m-auto'>
+        <Info />
+        <About />
+        <Testimonial />
+        <Work />
+        <Skills />
+        <ContactUs />
+      </div>
     </div>
   );
 }
