@@ -1,15 +1,18 @@
 import React from "react";
+import Scrollcontent from "../Component/aos/content";
 const Work = () => {
   return (
     <div className="mb-20">
-      <div className="flex justify-start items-center gap-x-4 my-[10%]">
-        <div>
-          <h1 className="text-3xl font-[300]  text-[#A1ABBF]">
-            <span className='text-[#52DEE5]'>03. </span>My Projects</h1>
+      <Scrollcontent>
+        <div className="flex justify-start items-center gap-x-4 my-[10%]">
+          <div>
+            <h1 className="text-3xl font-[300]  text-[#A1ABBF]">
+              <span className='text-[#52DEE5]'>03. </span>My Projects</h1>
+          </div>
+          {/* <div className='h-[2px] w-1/3 bg-green-400'></div> */}
+          <hr className="h-[2px] w-1/3 bg-[#A1ABBF] block" />
         </div>
-        {/* <div className='h-[2px] w-1/3 bg-green-400'></div> */}
-        <hr className="h-[2px] w-1/3 bg-[#A1ABBF] block" />
-      </div>
+      </Scrollcontent>
       <div className="flex items-top gap-28 mt-6">
         <div className="w-1/2">
           <img className="h-72 w-[623px]" src="https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="banner" />
