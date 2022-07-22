@@ -21,7 +21,7 @@ const Navbar = () => {
             <span className="sr-only"></span>
 
             <svg
-              className="block h-16 w-20"
+              className="block h-12 w-12"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -55,29 +55,26 @@ const Navbar = () => {
         </div>
       </div>
       {/* menu icon */}
-      <div
-        className={`sm:hidden ${open ? "top-0" : "top-[-440px]"}`}
-        id="mobile-menu"
-      >
-        {/* <div class="px-2 pt-2 pb-3 space-y-1">
-          <ul className=" sm:flex justify-evenly align-middle">
-            <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-xl hover:border-b-2 hover:border-[#52DEE5] cursor-pointer">
-              <span className="text-[#52DEE5]">1.</span> About
-            </li>
-            <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-xl hover:border-b-2 hover:border-[#52DEE5] cursor-pointer">
-              <span className="text-[#52DEE5]">2.</span> Projects
-            </li>
-            <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-xl hover:border-b-2 hover:border-[#52DEE5] cursor-pointer">
-              <span className="text-[#52DEE5]">3.</span> Skills
-            </li>
-            <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-xl hover:border-b-2 hover:border-[#52DEE5] cursor-pointer">
-              <span className="text-[#52DEE5]">4.</span> Contact
-            </li>
-          </ul>
-        </div> */}
+
+
+      <div className={`sm:hidden absolute ${open ? "top-0" : "top-[-440px]"} px-2 pt-2 pb-3 space-y-1`}>
+        <ul className="sm:flex justify-evenly align-middle mt-24">
+          <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-xl hover:border-b-2 hover:border-[#52DEE5] cursor-pointer">
+            <span className="text-[#52DEE5]">1.</span> About
+          </li>
+          <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-xl hover:border-b-2 hover:border-[#52DEE5] cursor-pointer">
+            <span className="text-[#52DEE5]">2.</span> Projects
+          </li>
+          <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-xl hover:border-b-2 hover:border-[#52DEE5] cursor-pointer">
+            <span className="text-[#52DEE5]">3.</span> Skills
+          </li>
+          <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-xl hover:border-b-2 hover:border-[#52DEE5] cursor-pointer">
+            <span className="text-[#52DEE5]">4.</span> Contact
+          </li>
+        </ul>
       </div>
       {/* desktop */}
-      {/* <div className="hidden sm:block">
+      <div className="hidden sm:block">
         <ul className=" sm:flex justify-evenly align-middle">
           <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-xl hover:border-b-2 hover:border-[#52DEE5] cursor-pointer">
             <span className="text-[#52DEE5]">1.</span> About
@@ -92,7 +89,7 @@ const Navbar = () => {
             <span className="text-[#52DEE5]">4.</span> Contact
           </li>
         </ul>
-      </div> */}
+      </div>
 
     </div>
   );
