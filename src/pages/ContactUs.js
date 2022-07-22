@@ -11,7 +11,7 @@ const ContactUs = () => {
           <div className="h-[2px] w-1/4 bg-[#A1ABBF]"></div>
         </div>
       </Scrollcontent>
-      <div className="flex justify-center items-center gap-12 mt-12">
+      <div className="flex justify-center flex-wrap items-center gap-12 mt-12">
         <button className=" border-2 border-[#52DEE5] text-[#52DEE5] py-2 px-5 rounded-md font-Sora text-basecursor-pointer">Github</button>
         <button className=" border-2 border-[#52DEE5] text-[#52DEE5] py-2 px-5 rounded-md font-Sora text-basecursor-pointer">Github</button>
         <button className=" border-2 border-[#52DEE5] text-[#52DEE5] py-2 px-5 rounded-md font-Sora text-basecursor-pointer">Github</button>

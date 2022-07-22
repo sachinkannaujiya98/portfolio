@@ -13,7 +13,7 @@ const Skills = () => {
           <hr className="h-[2px] w-1/3 bg-[#A1ABBF] block" />
         </div>
       </Scrollcontent>
-      <div className="flex gap-12 mt-3 items-center">
+      <div className="flex flex-wrap justify-center gap-12 mt-3 items-center">
         <a href="https://reactjs.org/docs/getting-started.html" target="_blank" rel="noreferrer"><img className="h-24 hover:scale-125 delay-150" src="https://www.avneesh.tech/logos/react.svg" alt="react" /></a>
         <a href="https://nextjs.org/" target="_blank" rel="noreferrer"><img className="h-24 hover:scale-125 delay-150" src=" https://www.avneesh.tech/logos/nextjs.svg" alt="next" /></a>
         <a href="https://nodejs.org/" target="_blank" rel="noreferrer"> <img className="h-24 hover:scale-125 delay-150 rounded-full" src={NodeLogo} alt="node" /></a>
