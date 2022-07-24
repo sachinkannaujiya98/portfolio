@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import Close from "../assets/icon/close";
 import Logo from "../assets/log2.png";
-const Navbar = () => {
+import { NavLink } from "react-router-dom";
 
+const Navbar = () => {
   let [open, setOpen] = useState(false);
   return (
     <div className="w-full sm:flex justify-between items-center pt-4 sticky top-0 bg-bgblue/60 backdrop-filter backdrop-blur-xl px-5 md:px-4 lg:px-28 ">
-      <div className=" text-slate-200 font-Sora text-xl flex items-center">
-        <img src={Logo} alt="logo" />
+      <div className=" text-slate-200 font-Sora text-base flex items-center">
+        <NavLink to="/">
+          <img src={Logo} alt="logo" />
+        </NavLink>
         <div
           className="absolute right-0 flex items-center sm:hidden "
           onClick={() => setOpen(!open)}
@@ -57,46 +60,87 @@ const Navbar = () => {
       </div>
       {/* menu icon */}
 
-      <div className={`sm:hidden bg-[#222E50] fixed top-0 ${open ? "right-0" : "right-[-440px]"} px-2 pt-2 pb-3 space-y-1 
-                    transition-all duration-500 ease-in-out 
-                    translate-x-0 `}>
+      <div
+        className={`sm:hidden bg-[#222E50] fixed top-0 ${open ? "right-0" : "right-[-440px]"
+          } px-2 pt-2 pb-3 space-y-1 transition-all duration-500 ease-in-out translate-x-0 `}
+      >
         <div className="pl-4 py-4">
           <Close onClick={() => setOpen(!open)} />
         </div>
-        <ul className="sm:flex justify-evenly align-middle pt-20">
-          <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-xl hover:border-b-2 hover:border-[#52DEE5] cursor-pointer">
-            <span className="text-[#52DEE5]">1.</span> About
+        <ul className="sm:flex justify-evenly align-middle pt-5">
+
+          <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-base">
+            <p className="border-b-2 border-transparent cursor-pointer text-text hover:border-b-2 hover:border-[#52DEE5]">
+              <NavLink to="about" onClick={() => setOpen(!open)}>
+                <span className="text-[#52DEE5]">1.</span> About
+              </NavLink>
+            </p>
           </li>
-          <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-xl hover:border-b-2 hover:border-[#52DEE5] cursor-pointer">
-            <span className="text-[#52DEE5]">2.</span> Projects
+
+          <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-base">
+            <p className="border-b-2 border-transparent cursor-pointer text-text hover:border-b-2 hover:border-[#52DEE5]">
+              <NavLink to="about" onClick={() => setOpen(!open)}>
+                <span className="text-[#52DEE5]">2.</span> Projects
+              </NavLink>
+            </p>
           </li>
-          <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-xl hover:border-b-2 hover:border-[#52DEE5] cursor-pointer">
-            <span className="text-[#52DEE5]">3.</span> Skills
+
+          <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-base">
+            <p className="border-b-2 border-transparent cursor-pointer text-text hover:border-b-2 hover:border-[#52DEE5]">
+              <NavLink to="skills" onClick={() => setOpen(!open)}>
+                <span className="text-[#52DEE5]">3.</span> Skills
+
+              </NavLink>
+            </p>
           </li>
-          <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-xl hover:border-b-2 hover:border-[#52DEE5] cursor-pointer">
-            <span className="text-[#52DEE5]">4.</span> Contact
+
+          <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-base">
+            <p className="border-b-2 border-transparent cursor-pointer text-text hover:border-b-2 hover:border-[#52DEE5]">
+              <NavLink to="contact" onClick={() => setOpen(!open)}>
+                <span className="text-[#52DEE5]">4.</span> Contact
+              </NavLink>
+            </p>
           </li>
         </ul>
       </div>
       {/* desktop */}
       <div className="hidden sm:block">
-        <ul className=" sm:flex justify-evenly align-middle">
-          <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-xl hover:border-b-2 hover:border-[#52DEE5] cursor-pointer">
-            <span className="text-[#52DEE5]">1.</span> About
+        <ul className="sm:flex justify-evenly align-middle">
+
+          <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-base">
+            <p className="border-b-2 border-transparent cursor-pointer text-text hover:border-b-2 hover:border-[#52DEE5]">
+              <NavLink to="/about">
+                <span className="text-[#52DEE5]">1.</span> About
+              </NavLink>
+            </p>
           </li>
-          <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-xl hover:border-b-2 hover:border-[#52DEE5] cursor-pointer">
-            <span className="text-[#52DEE5]">2.</span> Projects
+
+          <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-base">
+            <p className="border-b-2 border-transparent cursor-pointer text-text hover:border-b-2 hover:border-[#52DEE5]">
+              <NavLink to="/project">
+                <span className="text-[#52DEE5]">2.</span> Projects
+              </NavLink>
+            </p>
           </li>
-          <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-xl hover:border-b-2 hover:border-[#52DEE5] cursor-pointer">
-            <span className="text-[#52DEE5]">3.</span> Skills
+
+          <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-base">
+            <p className="border-b-2 border-transparent cursor-pointer text-text hover:border-b-2 hover:border-[#52DEE5]">
+              <NavLink to="/skills">
+                <span className="text-[#52DEE5]">3.</span> Skills
+              </NavLink>
+            </p>
           </li>
-          <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-xl hover:border-b-2 hover:border-[#52DEE5] cursor-pointer">
-            <span className="text-[#52DEE5]">4.</span> Contact
+
+          <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-base">
+            <p className="border-b-2 border-transparent cursor-pointer text-text hover:border-b-2 hover:border-[#52DEE5]">
+              <NavLink to="/contact">
+                <span className="text-[#52DEE5]">4.</span> Contact
+              </NavLink>
+            </p>
           </li>
         </ul>
       </div>
-
-    </div >
+    </div>
   );
 };
 
