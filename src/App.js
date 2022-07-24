@@ -11,7 +11,7 @@ function App() {
   return (
     <div className=''>
       <Navbar />
-      <div className='container max-w-6xl m-auto'>
+      <div className='container px-7 md:px-4 lg:px-28 xl:px-7 max-w-6xl m-auto'>
         <Info />
         <About />
         <Testimonial />
