@@ -1,11 +1,15 @@
-import React from 'react'
-import Navbar from '../../pages/Navbar'
+import React from "react";
+import Navbar from "../../pages/Navbar";
+import Footer from "../footer";
 
-const Layout = () => {
+const Layout = ({ childern }) => {
     return (
-        <Navbar />
+        <>
+            <Navbar />
+            {childern}
+            <Footer />
+        </>
+    );
+};
 
-    )
-}
-
-export default Layout
+export default Layout;
