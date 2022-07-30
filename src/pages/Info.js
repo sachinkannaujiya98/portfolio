@@ -6,7 +6,7 @@ const Info = () => {
       <div className='mb-20'>
         <div>
           <h4 className=' text-[#52DEE5] font-Sora text-3xl mt-32'>Hi, my name is</h4>
-          <h1 className='text-7xl font-bold font-Sora my-3 text-[#C7D2FC]'>Sachin Kannaujiya</h1>
+          <h1 className='text-7xl font-bold font-Sora my-3 text-[#C7D2FC]'>Avnish Tomar</h1>
           <h2 className='text-[#A1ABBF] font-Sora text-6xl font-medium my-2 leading-0'>I build amazing websites!</h2>
         </div>
         <div className='w-7/12'>

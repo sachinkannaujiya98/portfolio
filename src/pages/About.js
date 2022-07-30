@@ -1,6 +1,7 @@
 import React from 'react';
-import Avatar from "../assets/sachin.jpg";
 import Scrollcontent from '../Component/aos/content';
+import Avatar from "../assets/avnish1.jpeg"
+
 const About = () => {
   return (
     <div className='mb-20'>
