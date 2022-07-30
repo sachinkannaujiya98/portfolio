@@ -1,6 +1,6 @@
 import React from 'react';
 import Scrollcontent from '../Component/aos/content';
-import Avatar from "../assets/avnish1.jpeg"
+import Avatar from "../assets/sachin.jpg"
 
 const About = () => {
   return (
