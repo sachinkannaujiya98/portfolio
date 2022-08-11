@@ -1,9 +1,9 @@
 import React from 'react';
-import Avatar from "../assets/sachin.jpg";
-import Scrollcontent from '../Component/aos/content';
+import Avatar from "../../assets/sachin.jpg";
+import Scrollcontent from '../aos/content';
 const About = () => {
   return (
-    <div className='mb-20'>
+    <div className='mb-20' id="about">
       <Scrollcontent>
         <div className='flex justify-start items-center gap-x-4'>
           <div>
