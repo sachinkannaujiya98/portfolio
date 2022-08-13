@@ -1,26 +1,37 @@
 import React, { useState } from "react";
-import Close from "../assets/icon/close";
-import Logo from "../assets/log2.png";
-import { NavLink } from "react-router-dom";
+import Close from "../../assets/icon/close";
+import Logo from "../../assets/log2.png";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
-  let [open, setOpen] = useState(false);
+  let [nav, setNav] = useState(false);
+
+  const changeBackground = () => {
+    if (window.scrollY >= 100) {
+      setNav(true);
+    }
+    else {
+      setNav(false);
+    }
+  }
+  window.addEventListener('scroll', changeBackground);
   return (
-    <div className="w-full sm:flex justify-between items-center pt-4 sticky top-0 bg-bgblue/60 backdrop-filter backdrop-blur-xl px-5 md:px-4 lg:px-28 ">
+    <nav className="w-full sm:flex justify-between items-center pt-4 sticky top-0 bg-bgblue/60 backdrop-filter backdrop-blur-xl px-5 md:px-4 lg:px-28 ">
       <div className=" text-slate-200 font-Sora text-base flex items-center">
-        <NavLink to="/">
+        <Link to="/">
           <img src={Logo} alt="logo" />
-        </NavLink>
+        </Link>
         <div
           className="absolute right-0 flex items-center sm:hidden "
-          onClick={() => setOpen(!open)}
+          onClick={() => setNav(!nav)}
+          spy={true} smooth={true} duration={2000}
         >
           <button
             type="button"
             className="inline-flex items-center justify-center p-2 rounded-md text-gray-400"
             aria-controls="mobile-menu"
             aria-expanded="false"
-            name={open ? "close" : "menu"}
+            name={nav ? "close" : "menu"}
           >
             <span className="sr-only"></span>
 
@@ -61,44 +72,48 @@ const Navbar = () => {
       {/* menu icon */}
 
       <div
-        className={`sm:hidden bg-[#222E50] fixed top-0 ${open ? "right-0" : "right-[-440px]"
+        className={`sm:hidden bg-[#222E50] fixed top-0 ${nav ? "right-0" : "right-[-440px]"
           } px-2 pt-2 pb-3 space-y-1 transition-all duration-500 ease-in-out translate-x-0 `}
       >
         <div className="pl-4 py-4">
-          <Close onClick={() => setOpen(!open)} />
+          <Close onClick={() => setNav(!nav)} />
         </div>
         <ul className="sm:flex justify-evenly align-middle pt-5">
 
           <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-base">
             <p className="border-b-2 border-transparent cursor-pointer text-text hover:border-b-2 hover:border-[#52DEE5]">
-              <NavLink to="about" onClick={() => setOpen(!open)}>
+              <Link to="about" onClick={() => setNav(!nav)}
+                spy={true} smooth={true} duration={1000}>
                 <span className="text-[#52DEE5]">1.</span> About
-              </NavLink>
+              </Link>
             </p>
           </li>
 
           <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-base">
             <p className="border-b-2 border-transparent cursor-pointer text-text hover:border-b-2 hover:border-[#52DEE5]">
-              <NavLink to="about" onClick={() => setOpen(!open)}>
+              <Link to="about" onClick={() => setNav(!nav)}
+                spy={true} smooth={true} duration={1000}>
                 <span className="text-[#52DEE5]">2.</span> Projects
-              </NavLink>
+              </Link>
             </p>
           </li>
 
           <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-base">
             <p className="border-b-2 border-transparent cursor-pointer text-text hover:border-b-2 hover:border-[#52DEE5]">
-              <NavLink to="skills" onClick={() => setOpen(!open)}>
+              <Link to="skills" onClick={() => setNav(!nav)}
+                spy={true} smooth={true} duration={1000}>
                 <span className="text-[#52DEE5]">3.</span> Skills
 
-              </NavLink>
+              </Link>
             </p>
           </li>
 
           <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-base">
             <p className="border-b-2 border-transparent cursor-pointer text-text hover:border-b-2 hover:border-[#52DEE5]">
-              <NavLink to="contact" onClick={() => setOpen(!open)}>
+              <Link to="contact" onClick={() => setNav(!nav)}
+                spy={true} smooth={true} duration={1000}>
                 <span className="text-[#52DEE5]">4.</span> Contact
-              </NavLink>
+              </Link>
             </p>
           </li>
         </ul>
@@ -109,38 +124,38 @@ const Navbar = () => {
 
           <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-base">
             <p className="border-b-2 border-transparent cursor-pointer text-text hover:border-b-2 hover:border-[#52DEE5]">
-              <NavLink to="/about">
+              <Link to="about" spy={true} smooth={true} duration={1000}>
                 <span className="text-[#52DEE5]">1.</span> About
-              </NavLink>
+              </Link>
             </p>
           </li>
 
           <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-base">
             <p className="border-b-2 border-transparent cursor-pointer text-text hover:border-b-2 hover:border-[#52DEE5]">
-              <NavLink to="/project">
+              <Link to="project" spy={true} smooth={true} duration={1000}>
                 <span className="text-[#52DEE5]">2.</span> Projects
-              </NavLink>
+              </Link>
             </p>
           </li>
 
           <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-base">
             <p className="border-b-2 border-transparent cursor-pointer text-text hover:border-b-2 hover:border-[#52DEE5]">
-              <NavLink to="/skills">
+              <Link to="skills" spy={true} smooth={true} duration={1000}>
                 <span className="text-[#52DEE5]">3.</span> Skills
-              </NavLink>
+              </Link>
             </p>
           </li>
 
           <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-base">
             <p className="border-b-2 border-transparent cursor-pointer text-text hover:border-b-2 hover:border-[#52DEE5]">
-              <NavLink to="/contact">
+              <Link to="contact" spy={true} smooth={true} duration={1000}>
                 <span className="text-[#52DEE5]">4.</span> Contact
-              </NavLink>
+              </Link>
             </p>
           </li>
         </ul>
       </div>
-    </div>
+    </nav>
   );
 };
 
