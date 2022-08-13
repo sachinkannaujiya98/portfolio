@@ -1,10 +1,10 @@
 import React from "react";
-import NodeLogo from "../assets/node.jpg"
-import Mongo_DbLogo from "../assets/mongodb.png"
-import Scrollcontent from "../Component/aos/content";
+import NodeLogo from "../../assets/node.jpg"
+import Mongo_DbLogo from "../../assets/mongodb.png"
+import Scrollcontent from "../aos/content";
 const Skills = () => {
   return (
-    <div>
+    <div id="skills">
       <Scrollcontent>
         <div className="flex justify-start items-center gap-x-4 my-12">
           <div className="">

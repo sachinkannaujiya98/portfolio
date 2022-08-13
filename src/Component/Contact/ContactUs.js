@@ -1,9 +1,9 @@
 import React from "react";
-import Scrollcontent from "../Component/aos/content";
+import Scrollcontent from "../aos/content";
 
 const ContactUs = () => {
   return (
-    <div>
+    <div id="contact">
       <Scrollcontent>
         <div className="flex items-center justify-center mt-12 gap-4">
           <div className="h-[2px] w-1/4 bg-[#A1ABBF]"></div>

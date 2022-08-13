@@ -1,8 +1,8 @@
 import React from "react";
-import Scrollcontent from "../Component/aos/content";
+import Scrollcontent from "../aos/content";
 const Work = () => {
   return (
-    <div className="mb-20">
+    <div className="h-full mb-20" id="project">
       <Scrollcontent>
         <div className="flex justify-start items-center gap-x-4 my-[10%]">
           <div>
