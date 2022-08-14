@@ -7,7 +7,7 @@ const Navbar = () => {
   let [nav, setNav] = useState(false);
 
   const changeBackground = () => {
-    if (window.scrollY >= 100) {
+    if (window.scrollY >= 10000) {
       setNav(true);
     }
     else {
@@ -24,7 +24,7 @@ const Navbar = () => {
         <div
           className="absolute right-0 flex items-center sm:hidden "
           onClick={() => setNav(!nav)}
-          spy={true} smooth={true} duration={2000}
+          smooth={true} duration={2000}
         >
           <button
             type="button"
@@ -72,51 +72,52 @@ const Navbar = () => {
       {/* menu icon */}
 
       <div
-        className={`sm:hidden bg-[#222E50] fixed top-0 ${nav ? "right-0" : "right-[-440px]"
+        className={`sm:hidden bg-[#222E50] fixed top-0 ${nav ? "block right-0" : "hidden"
           } px-2 pt-2 pb-3 space-y-1 transition-all duration-500 ease-in-out translate-x-0 `}
       >
         <div className="pl-4 py-4">
           <Close onClick={() => setNav(!nav)} />
+
+          <ul className="sm:flex justify-evenly align-middle pt-5">
+
+            <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-base">
+              <p className="border-b-2 border-transparent cursor-pointer text-text hover:border-b-2 hover:border-[#52DEE5]">
+                <Link to="about" onClick={() => setNav(!nav)}
+                  smooth={true} duration={1000}>
+                  <span className="text-[#52DEE5]">1.</span> About
+                </Link>
+              </p>
+            </li>
+
+            <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-base">
+              <p className="border-b-2 border-transparent cursor-pointer text-text hover:border-b-2 hover:border-[#52DEE5]">
+                <Link to="about" onClick={() => setNav(!nav)}
+                  smooth={true} duration={1000}>
+                  <span className="text-[#52DEE5]">2.</span> Projects
+                </Link>
+              </p>
+            </li>
+
+            <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-base">
+              <p className="border-b-2 border-transparent cursor-pointer text-text hover:border-b-2 hover:border-[#52DEE5]">
+                <Link to="skills" onClick={() => setNav(!nav)}
+                  smooth={true} duration={1000}>
+                  <span className="text-[#52DEE5]">3.</span> Skills
+
+                </Link>
+              </p>
+            </li>
+
+            <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-base">
+              <p className="border-b-2 border-transparent cursor-pointer text-text hover:border-b-2 hover:border-[#52DEE5]">
+                <Link to="contact" onClick={() => setNav(!nav)}
+                  smooth={true} duration={1000}>
+                  <span className="text-[#52DEE5]">4.</span> Contact
+                </Link>
+              </p>
+            </li>
+          </ul>
         </div>
-        <ul className="sm:flex justify-evenly align-middle pt-5">
-
-          <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-base">
-            <p className="border-b-2 border-transparent cursor-pointer text-text hover:border-b-2 hover:border-[#52DEE5]">
-              <Link to="about" onClick={() => setNav(!nav)}
-                spy={true} smooth={true} duration={1000}>
-                <span className="text-[#52DEE5]">1.</span> About
-              </Link>
-            </p>
-          </li>
-
-          <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-base">
-            <p className="border-b-2 border-transparent cursor-pointer text-text hover:border-b-2 hover:border-[#52DEE5]">
-              <Link to="about" onClick={() => setNav(!nav)}
-                spy={true} smooth={true} duration={1000}>
-                <span className="text-[#52DEE5]">2.</span> Projects
-              </Link>
-            </p>
-          </li>
-
-          <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-base">
-            <p className="border-b-2 border-transparent cursor-pointer text-text hover:border-b-2 hover:border-[#52DEE5]">
-              <Link to="skills" onClick={() => setNav(!nav)}
-                spy={true} smooth={true} duration={1000}>
-                <span className="text-[#52DEE5]">3.</span> Skills
-
-              </Link>
-            </p>
-          </li>
-
-          <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-base">
-            <p className="border-b-2 border-transparent cursor-pointer text-text hover:border-b-2 hover:border-[#52DEE5]">
-              <Link to="contact" onClick={() => setNav(!nav)}
-                spy={true} smooth={true} duration={1000}>
-                <span className="text-[#52DEE5]">4.</span> Contact
-              </Link>
-            </p>
-          </li>
-        </ul>
       </div>
       {/* desktop */}
       <div className="hidden sm:block">
@@ -124,7 +125,7 @@ const Navbar = () => {
 
           <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-base">
             <p className="border-b-2 border-transparent cursor-pointer text-text hover:border-b-2 hover:border-[#52DEE5]">
-              <Link to="about" spy={true} smooth={true} duration={1000}>
+              <Link to="about" smooth={true} duration={1000}>
                 <span className="text-[#52DEE5]">1.</span> About
               </Link>
             </p>
@@ -132,7 +133,7 @@ const Navbar = () => {
 
           <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-base">
             <p className="border-b-2 border-transparent cursor-pointer text-text hover:border-b-2 hover:border-[#52DEE5]">
-              <Link to="project" spy={true} smooth={true} duration={1000}>
+              <Link to="project" smooth={true} duration={1000}>
                 <span className="text-[#52DEE5]">2.</span> Projects
               </Link>
             </p>
@@ -140,7 +141,7 @@ const Navbar = () => {
 
           <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-base">
             <p className="border-b-2 border-transparent cursor-pointer text-text hover:border-b-2 hover:border-[#52DEE5]">
-              <Link to="skills" spy={true} smooth={true} duration={1000}>
+              <Link to="skills" smooth={true} duration={1000}>
                 <span className="text-[#52DEE5]">3.</span> Skills
               </Link>
             </p>
@@ -148,7 +149,7 @@ const Navbar = () => {
 
           <li className="mx-4 my-5 sm:my-0 text-[#C7D2FC] font-Sora text-base">
             <p className="border-b-2 border-transparent cursor-pointer text-text hover:border-b-2 hover:border-[#52DEE5]">
-              <Link to="contact" spy={true} smooth={true} duration={1000}>
+              <Link to="contact" smooth={true} duration={1000}>
                 <span className="text-[#52DEE5]">4.</span> Contact
               </Link>
             </p>
